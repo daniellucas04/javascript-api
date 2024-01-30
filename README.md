@@ -1,6 +1,21 @@
 # API Tasks - Documentation
 This API is simple, contains methods to Create, Read, Update, Delete data from a database. The database `dbTodoList` contains only 1 table called `tasks`.
 
+### Database
+here is the code to create the database, it's very simple so it's much easier to copy, paste and run
+```sql
+CREATE DATABASE IF NOT EXISTS `dbtodolist`;
+USE `dbtodolist`;
+
+CREATE TABLE IF NOT EXISTS `tasks` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `title` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `status` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL DEFAULT (_utf8mb4'pendente'),
+  `created_at` datetime NOT NULL DEFAULT (now()),
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+```
+
 ### Methods
 to consume the API you need to access the URL using this structure for each method
 
