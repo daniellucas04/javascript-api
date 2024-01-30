@@ -1,6 +1,8 @@
 # API Tasks - Documentation
 This API is simple, contains methods to Create, Read, Update, Delete data from a database. The database `dbTodoList` contains only 1 table called `tasks`.
 
+To run the API, you can use `npm run dev` to run with **nodemon** or `npm start` to run with **node**
+
 ### Database
 here is the code to create the database, it's very simple so it's much easier to copy, paste and run
 ```sql
