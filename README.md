@@ -16,7 +16,7 @@ http://localhost:333/tasks
     "title": "Study backend"
 }
 
-# The response for this endpoint is:
+# Response
 {
     "insertId": 1
 }
@@ -31,7 +31,7 @@ With the method `GET` you need only to access the base URL, and will return all 
 # Example
 http://localhost:333/tasks
 
-# The response for this endpoint is:
+# Response
 [
     {
         "id": 1,
