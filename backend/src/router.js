@@ -9,8 +9,18 @@ const router = express.Router();
 router.get('/tasks', tasksController.getAllTasks)
 
 /**
- * Retorna o ID da última inserção
+ * Retorna o ID da última inserção do banco
  */
-router.post('/tasks', tasksMiddleware.validateBody, tasksController.createdTask)
+router.post('/tasks', tasksMiddleware.validateFieldTitle, tasksController.createdTask)
+
+/**
+ * Utilizado para remover uma tarefa do banco
+ */
+router.delete('/tasks/:id', tasksController.deleteTask)
+
+/**
+ * Utilizado atualizar uma tarefa no banco
+ */
+router.put('/tasks/:id', tasksMiddleware.validateFieldTitle, tasksMiddleware.validateFieldStatus, tasksController.updateTask)
 
 module.exports = router;

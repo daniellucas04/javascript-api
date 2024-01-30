@@ -11,4 +11,16 @@ async function createdTask(request, response) {
     return response.status(201).json(createdTask)
 }
 
-module.exports = { getAllTasks, createdTask }
+async function deleteTask(request, response) {
+    const { id } = request.params;
+    await tasksModel.deleteTask(id);
+    return response.status(204).json();
+}
+
+async function updateTask(request, response) {
+    const { id } = request.params;
+    await tasksModel.updateTask(id, request.body);
+    return response.status(204).json();
+}
+
+module.exports = { getAllTasks, createdTask, deleteTask, updateTask }
