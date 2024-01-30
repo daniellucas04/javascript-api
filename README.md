@@ -73,6 +73,7 @@ http://localhost:3333/tasks/1
 # Response 
 Status 204 (No message)
 ```
+The title and status field is required and validation can return a JSON message for the error that occurred if it is not entered or if it is empty.
 
 #### [DELETE] - http://localhost:3333/tasks/:id
 With the method `DELETE` you need to pass a `id` in the end of the URL. This method doesn't return message but return a status `204` on succeeded.
