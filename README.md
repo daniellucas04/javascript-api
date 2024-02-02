@@ -26,7 +26,7 @@ With the method `POST` you need to pass a `request.body` with the `"title"` of t
 
 ```bash
 # Example
-http://localhost:333/tasks
+http://localhost:3333/tasks
 
 # Request Body
 {
@@ -46,7 +46,7 @@ With the method `GET` you need only to access the base URL, and will return all 
 
 ```bash
 # Example
-http://localhost:333/tasks
+http://localhost:3333/tasks
 
 # Response
 [
